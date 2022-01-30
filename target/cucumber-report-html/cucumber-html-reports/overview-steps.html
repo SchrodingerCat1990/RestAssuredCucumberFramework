@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>RestAssuredCucumberFramework</td>
+        <td>1</td>
+      <td>30 Jan 2022, 14:49</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepDefinitions.ApplicationLoginStepDef.home_page_is_displayed()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.ApplicationLoginStepDef.home_page_title_is_displayed(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="496500">0.000</td>
+              <td class="duration" data-value="496500">0.000</td>
+              <td class="duration" data-value="993000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.ApplicationLoginStepDef.user_is_on_landing_page()</td>
+              <td>2</td>
+              <td class="duration" data-value="1039950">0.001</td>
+              <td class="duration" data-value="1039950">0.001</td>
+              <td class="duration" data-value="2079900">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.ApplicationLoginStepDef.user_logs_in_to_the_site_with_username_and_password(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="3949200">0.003</td>
+              <td class="duration" data-value="3949200">0.007</td>
+              <td class="duration" data-value="7898400">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.GoogleAddPlaceStepDef.request_is_properties_file_headers_key_and_value_parameter_key_and_value_and_body(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1157273550">1.157</td>
+              <td class="duration" data-value="1157273550">2.305</td>
+              <td class="duration" data-value="2314547100">2.314</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.GoogleAddPlaceStepDef.request_with_properties_file_headers_query_parameter(java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="4066900">0.004</td>
+              <td class="duration" data-value="4066900">0.004</td>
+              <td class="duration" data-value="4066900">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.GoogleAddPlaceStepDef.resource_and_http_method(java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="1819254933">1.819</td>
+              <td class="duration" data-value="1819254933">2.715</td>
+              <td class="duration" data-value="5457764800">5.457</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.GoogleAddPlaceStepDef.validate_is_same_as_returned_by_with_headers_query_parameter(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="2872105250">2.872</td>
+              <td class="duration" data-value="2872105250">3.496</td>
+              <td class="duration" data-value="5744210500">5.744</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.GoogleAddPlaceStepDef.validate_status_code_should_be_and_content(java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="18950300">0.018</td>
+              <td class="duration" data-value="18950300">0.051</td>
+              <td class="duration" data-value="56850900">0.056</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>9</td>
+            <td>19</td>
+            <td class="duration">0.715</td>
+            <td class="duration">5.744</td>
+            <td class="duration">13.588</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

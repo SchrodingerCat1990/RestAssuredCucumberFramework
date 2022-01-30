@@ -1,0 +1,8 @@
+common\pojoClasses\GoogleAPIPojo$AddPlaceRequest$Location.class
+common\pojoClasses\GoogleAPIPojo.class
+common\pojoClasses\GoogleAPIPojo$AddPlaceRequest.class
+common\pojoClasses\GoogleAPIPojo$DeletePlaceRequest.class
+CucumberFramework\App.class
+common\pojoClasses\GoogleAPIPojo$AddPlaceResponse.class
+common\pojoClasses\GoogleAPIPojo$DeletePlaceResponse.class
+common\pojoClasses\GoogleAPIPojo$UpdatePlaceDetailsRequest.class
